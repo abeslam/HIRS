@@ -601,7 +601,7 @@ class SystemTest(unittest.TestCase):
 		logging.info("*****************beginning of attestation ca portal online test *****************")
 	 	AcaPortal.check_is_online()
 
-	@unittest.skipIf(not is_tpm2(TPM_VERSION), "Skipping this test due to TPM Version " + TPM_VERSION)
+	#unittest.skipIf(not is_tpm2(TPM_VERSION), "Skipping this test due to TPM Version " + TPM_VERSION)
 	def test_13_tpm2_initial_provision(self):
 		"""Test that running the tpm hirs provisioner works"""
 		logging.info("*****************beginning of initial provisioner run *****************")
@@ -617,7 +617,7 @@ class SystemTest(unittest.TestCase):
 
        	logging.info("Initial provisioner run output: {0}".format(provisioner_out))
 
-	@unittest.skipIf(not is_tpm2(TPM_VERSION), "Skipping this test due to TPM Version " + TPM_VERSION)
+	#unittest.skipIf(not is_tpm2(TPM_VERSION), "Skipping this test due to TPM Version " + TPM_VERSION)
 	def test_14_device_info_report_stored_after_provisioning(self):
 		"""Test that running the hirs provisioner results in storing a device info report for
 			the device in the DB"""
